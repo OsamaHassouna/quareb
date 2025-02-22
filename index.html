@@ -28,12 +28,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
         rel="stylesheet">
+        
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
         rel="preload" as="fonts">
-
     <link href="./assets/css/css.css" rel="preload" as="style" />
     <link rel="preload" href="./assets/media/hero-bg.png" as="image">
+    <link rel="preload" href="./assets/media/eissa.png" as="image">
+    <link rel="preload" href="./assets/media/amira.png" as="image">
+    <link rel="preload" href="./assets/media/mariam.png" as="image">
     <!-- <link rel="preload" href="./assets/media/hero-pattern.svg" as="image"> -->
 
     <link href="./assets/css/css.css" rel="stylesheet" />
@@ -153,9 +156,21 @@
                 <div class="qrb-team__content">
                     <h2>معالجونا الخبراء</h2>
                     <div class="qrb-team__slider">
+                        <div class="qrb-slider__arrow">
+                            <a href="" class="qrb-btn btn-prev disabled">
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 7H1M19 7L13 1M19 7L13 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="" class="qrb-btn btn-next">
+                                <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 7H1M19 7L13 1M19 7L13 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
                         <div class="qrb-slider__item">
                             <div class="item-img img-founder">
-                                <img src="./assets/media/eissa.png" alt="Doctor Picture" width="297" height="287">
+                                <img src="./assets/media/eissa.png" alt="Doctor Picture" width="297" height="287" loading="lazy">
                             </div>
                             <h2 class="item-title">د. محمد عيسى</h2>
                             <div class="item-desc__content">
@@ -171,7 +186,7 @@
                         </div>
                         <div class="qrb-slider__item">
                             <div class="item-img">
-                                <img src="./assets/media/mariam.png" alt="Doctor Picture" width="297" height="287">
+                                <img src="./assets/media/mariam.png" alt="Doctor Picture" width="297" height="287" loading="lazy">
                             </div>
                             <h2 class="item-title">مريم عزيز</h2>
                             <div class="item-desc__content">
@@ -187,7 +202,7 @@
                         </div>
                         <div class="qrb-slider__item">
                             <div class="item-img">
-                                <img src="./assets/media/amira.png" alt="Doctor Picture" width="297" height="287">
+                                <img src="./assets/media/amira.png" alt="Doctor Picture" width="297" height="287" loading="lazy">
                             </div>
                             <h2 class="item-title">د. أميرة الديب</h2>
                             <div class="item-desc__content">
@@ -203,7 +218,7 @@
 
                         <div class="qrb-slider__item">
                             <div class="item-img">
-                                <img src="./assets/media/eissa.png" alt="Doctor Picture" width="297" height="287">
+                                <img src="./assets/media/eissa.png" alt="Doctor Picture" width="297" height="287" loading="lazy">
                             </div>
                             <h2 class="item-title">د. محمد عيسى</h2>
                             <div class="item-desc__content">
@@ -219,7 +234,7 @@
                         </div>
                         <div class="qrb-slider__item">
                             <div class="item-img">
-                                <img src="./assets/media/mariam2.png" alt="Doctor Picture" width="297" height="287">
+                                <img src="./assets/media/mariam.png" alt="Doctor Picture" width="297" height="287" loading="lazy">
                             </div>
                             <h2 class="item-title">مريم عزيز</h2>
                             <div class="item-desc__content">
@@ -235,7 +250,7 @@
                         </div>
                         <div class="qrb-slider__item">
                             <div class="item-img">
-                                <img src="./assets/media/amira2.png" alt="Doctor Picture" width="297" height="287">
+                                <img src="./assets/media/amira.png" alt="Doctor Picture" width="297" height="287" loading="lazy">
                             </div>
                             <h2 class="item-title">د. أميرة الديب</h2>
                             <div class="item-desc__content">
@@ -248,211 +263,104 @@
                                 <p>150$ / الساعة</p>
                             </div>
                         </div>
-
-
-                        <!-- <div id="carouselExampleIndicators" class="carousel slide">
-                            <div class="carousel-indicators">
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner">
-                              <div class="qrb-card__doctor">
-                                <div class="card-img">
-                                    <img src="./assets/media/eissa.png" alt="Doctor Picture" width="297" height="287">
-                                </div>
-                                <h2 class="card-title">د. محمد عيسى</h2>
-                                <div class="card-desc__wrapper">
-                                    <h3>مؤسس Quareb</h3>
-                                    <p>طبيب نفسي | معالج نفسي جنسي وعلاقاتي معتمد</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="" class="qrb-btn btn-slider">احجز موعداً</a>
-                                    <p>150$ / الساعة</p>
-                                </div>
-                              </div>
-                              <div class="carousel-item">
-                                
-                              </div>
-                              <div class="carousel-item">
-                              </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="visually-hidden">Next</span>
-                            </button>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- <section class="qrb-about">
-            <div class="container about-texture">
-                <div class="row justify-content-center">
-                    <div class="col-lg-9 col-md-12">
-                        <div class="qrb-about__content">
-                            <h2 class="qrb-about__title">With cutting-edge AI, tech innovation and creative strategy
-                            </h2>
-                            <p class="qrb-about__desc">
-                                we craft identities, campaigns, and solutions that empower businesses to stand out and
-                                connect meaningfully.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section class="qrb-services">
+        <section class="qrb-programs">
             <div class="container">
-                <h2 class="qrb-services__subtitle">Our Services</h2>
-                <h3 class="qrb-services__title">
-                    <span>Human-centered </span>
-                    solutions with practical impact.
-                </h3>
-                <ul class="qrb-services__list">
-                    <li class="service-item circle-white">
-                        <h4 class="service-item__title">Branding & Identity Design</h4>
-                        <p class="service-item__desc">
-                            Crafting brand identities that connect with your audience and drive your business forward.
-                        </p>
-                    </li>
-                    <li class="service-item asterisk-white">
-                        <h4 class="service-item__title">Social Media & Digital Campaigns</h4>
-                        <p class="service-item__desc">
-                            Engage your audience and boost your impact with strategic social media campaigns.
-                        </p>
-                    </li>
-                    <li class="service-item slash-white">
-                        <h4 class="service-item__title">Tech-Driven Solutions</h4>
-                        <p class="service-item__desc">
-                            Innovative tech solutions designed to streamline, optimize and evolve your business.
-                        </p>
-                    </li>
-                    <li class="service-item comma-white">
-                        <h4 class="service-item__title">Media Buying & Ad Strategy</h4>
-                        <p class="service-item__desc">
-                            Maximize reach, sales, and ROI with a tailored paid ads strategy.
-                        </p>
-                    </li>
-                    <li class="service-item slash-black">
-                        <h4 class="service-item__title">UI/UX Design & Development</h4>
-                        <p class="service-item__desc">
-                            Crafting intuitive UI/UX designs that enhance user experience and drive business success.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section> -->
-
-        <!-- <section class="qrb-portfolio">
-            <div class="container">
-                <div class="qrb-portfolio__content">
-                    <div class="qrb-portfolio__header">
-                        <h2 class="qrb-portfolio__title">Our Work</h2>
-                        <div class="qrb-portfolio__filter">
-                            <button class="qrb-btn filter-btn active" data-filter="all">All</button>
-                            <button class="qrb-btn filter-btn" data-toggle=".branding">Branding</button>
-                            <button class="qrb-btn filter-btn" data-toggle=".design">Design</button>
-                            <button class="qrb-btn filter-btn" data-toggle=".social">Social Media</button>
-                            <button class="qrb-btn filter-btn" data-toggle=".ui">UI</button>
-                            <button class="qrb-btn filter-btn" data-toggle=".ux">UX</button>
-                        </div>
-                    </div>
-                    <div class="qrb-portfolio__items portfolio">
-                        <div class="row">
-                            <div class="col-lg-3 branding mix">
-                                <div class="portfolio-item">
-                                    <img src="./assets/media/portfolio/branding.png" alt="Branding Project 1"
-                                        loading="lazy" />
+                <div class="qrb-programs__content">
+                    <h2>البرامج</h2>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="qrb-program">
+                                <div class="qrb-program__icon">
+                                    <img src="./assets/media/female-icon.svg" alt="Female icon" width="49" height="58" loading="lazy" >
                                 </div>
-                            </div>
-                            <div class="col-lg-6 social branding mix">
-                                <div class="portfolio-item">
-                                    <img src="./assets/media/portfolio/social.png" alt="Social Media Project 1"
-                                        loading="lazy" />
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
+                                <h3 class="qrb-program__title">برنامج علاج التشنج المهبلي</h3>
                                 <div class="row">
-                                    <div class="col-12 ui ux mix">
-                                        <div class="portfolio-item">
-                                            <img src="./assets/media/portfolio/ui.png" alt="ui Project 1"
-                                                loading="lazy" />
+                                    <div class="col-lg-6">
+                                        <div class="qrb-program__desc">
+                                            <h4>علاج متخصص ودعم لحالات التشنج المهبلي</h4>
+                                            <ul>
+                                                <li>✔ تقنيات استرخاء موجهة</li>
+                                                <li>✔ دعم احترافي</li>
+                                                <li>✔ مجموعة دعم مجتمعي</li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="col-12 ux mix">
-                                        <div class="portfolio-item">
-                                            <img src="./assets/media/portfolio/ux.png" alt="UX Project 1"
-                                                loading="lazy" />
+                                    <div class="col-lg-6">
+                                        <div class="qrb-program__img">
+                                            <img src="./assets/media/female.png" alt="Female image" width="192" height="140" loading="lazy" >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="qrb-program__doctors">
+                                            <div class="doctor-img">
+                                                <img src="./assets/media/mariam.png" alt="Doctor Picture" width="77" height="80" loading="lazy">
+                                            </div>
+                                            <div class="doctor-name">
+                                                <p>أنشأته:</p>
+                                                <h3>مريم عزيز</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="qrb-program__actions">
+                                            <a href="" class="qrb-btn btn-primary">ابدأ البرنامج</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="qrb-program program-second">
+                                <div class="qrb-program__icon">
+                                    <img src="./assets/media/male-icon.svg" alt="male icon" width="42" height="47" loading="lazy" >
+                                </div>
+                                <h3 class="qrb-program__title">برنامج علاج ضعف الانتصاب</h3>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="qrb-program__desc">
+                                            <h4> دعم شامل وتمارين لإدارة الضعف الجنسي</h4>
+                                            <ul>
+                                                
+                                                <li>✔ جداول تمارين مخصصة</li>
+                                                <li>✔ مقاطع فيديو إرشادية من الخبراء</li>
+                                                <li>✔ أدوات تتبع التقدم</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="qrb-program__img">
+                                            <img src="./assets/media/male.png" alt="male image" width="189" height="178" loading="lazy" >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="qrb-program__doctors">
+                                            <div class="doctor-img">
+                                                <img src="./assets/media/eissa.png" alt="Doctor Picture" width="77" height="80" loading="lazy">
+                                            </div>
+                                            <div class="doctor-name">
+                                                <p>أنشأه:</p>
+                                                <h3>د. محمد عيسى</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 align-self-center">
+                                        <div class="qrb-program__actions">
+                                            <a href="" class="qrb-btn btn-primary">ابدأ البرنامج</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="qrb-portfolio__more">
-                        <a href="" class="qrb-btn btn-secondary">Discover More</a>
-                    </div>
-
                 </div>
             </div>
-        </section> -->
+        </section>
 
-        <!-- <section class="qrb-counters">
-            <div class="container">
-                <ul class="qrb-counters__content">
-                    <li>
-                        <div class="counter-icon">
-                            <img src="./assets/media/smily.png" alt="smiley face icon"  loading="lazy" />
-                            <span>14+</span>
-                        </div>
-                        <h2 class="counter-title">Years Experience</h2>
-                    </li>
-                    <li>
-                        <div class="counter-icon">
-                            <img src="./assets/media/hearts.png" alt="hearts icon" />
-                            <span>68M</span>
-                        </div>
-                        <h2 class="counter-title">Total Subscribers & Followers</h2>
-                    </li>
-                    <li>
-                        <div class="counter-icon">
-                            <img src="./assets/media/handshake.png" alt="handshake icon"  loading="lazy" />
-                            <span>277</span>
-                        </div>
-                        <h2 class="counter-title">Project Done</h2>
-                    </li>
-                </ul>
-            </div>
-        </section> -->
-
-        <!-- <section class="qrb-contact">
-            <div class="container">
-                <div class="qrb-contact__content">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4">
-                            <div class="qrb-contact__pattern">
-                                <img src="./assets/media/contact-pattern.svg" width="100%" alt="Romoz logo Pattern" >
-                            </div>
-                        </div>
-                        <div class="col-lg-8">
-                            <div class="qrb-contact__cta">
-                                <h2 class="qrb-contact__title">Evolve your business</h2>
-                                <p class="qrb-contact__desc">Ready to evolve your business with the suitable solution? Get in touch. </p>
-                                <button class="qrb-btn btn-white">Book Call</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
     </main>
 
     <!-- <footer class="qrb-footer">
