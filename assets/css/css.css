@@ -470,7 +470,7 @@ header{
 /*=============*/
 /* Programs */
 .qrb-programs {
-  padding:  47px 0;
+  padding:  47px 0 74px;
   background: #FDF4E4;
 }
 .qrb-programs__content > h2 {
@@ -489,6 +489,7 @@ header{
   box-shadow: 0px 4px 4px 0px #00000040;
   height: 100%;
   text-align: center;
+  margin-bottom: 30px;
 }
 .qrb-program .qrb-program__icon {
   display: inline-flex;
@@ -538,10 +539,59 @@ header{
   line-height: 32px;
   color: #051878;
 }
+.qrb-program .qrb-program__img {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+}
+.qrb-program .qrb-program__img:before {
+  content: '';
+  position: absolute;
+  width: 143px;
+  height: 121px;
+  background: #F3C15E2B;
+  border-radius: 100%;
+  z-index: -1;
+  inset-inline-end: 14px;
+  top: 13px;
+}
+.qrb-program .qrb-program__img img {
+  width: 192px;
+  height: auto;
+  object-fit: cover;
+}
 .qrb-program .qrb-program__doctors {
   display: flex;
   align-items: center;
   gap: 16px;
+}
+.qrb-program .qrb-program__doctors .doctor-img {
+  position: relative;
+  isolation: isolate;
+}
+.qrb-program .qrb-program__doctors .doctor-img:before {
+  content: '';
+  position: absolute;
+  width: 78px;
+  height: 66px;
+  border-radius: 100%;
+  background: #F3C15E;
+  z-index: -1;
+  rotate: -45deg;
+  inset-inline-start: -6px;
+}
+.qrb-program .qrb-program__doctors .doctor-img::after {
+  content: '';
+  width: 73px;
+  height: 2px;
+  background: #051878;
+  bottom: -2px;
+  position: absolute;
+  inset-inline-start: -5px;
+}
+.qrb-program .qrb-program__doctors .doctor-img img {
+  width: auto;
+  height: 68px;
 }
 .qrb-program .qrb-program__doctors .doctor-name p {
   font-weight: 400;
@@ -574,7 +624,20 @@ header{
    inset-inline-start: auto;
    inset-inline-end: -20px;
 }
-.qrb-program.program-second  .qrb-program__actions .qrb-btn {
+.qrb-program.program-second .qrb-program__img:before{
+  background: #6295FF1A;
+  inset-inline-end: 14px;
+  top: 38px;
+}
+.qrb-program.program-second .qrb-program__img img {width: 189px;}
+.qrb-program.program-second .qrb-program__doctors .doctor-img:before{
+  background: #6295FF;
+  inset-inline-start: 0;
+}
+.qrb-program.program-second .qrb-program__doctors .doctor-img::after{
+  inset-inline-start: -1px;
+}
+.qrb-program.program-second .qrb-program__actions .qrb-btn {
   background: #051878;
   color: #F3C15E;
 }
