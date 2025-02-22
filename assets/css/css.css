@@ -177,8 +177,9 @@ header{
   background: url('../media/hero-bg.png') no-repeat center;
   top: 0;
   inset-inline-start: 0;
-  background-size: contain;
+  background-size: cover;
   z-index: -1;
+  background-position: top;
 }
 .qrb-hero .qrb-hero__title {
   font-weight: 700;
