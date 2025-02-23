@@ -1,14 +1,26 @@
 document.addEventListener('DOMContentLoaded', function () {
     const sliderWrapper = document.querySelector('.qrb-slider__items'); 
-    const sliderItems = document.querySelectorAll('.qrb-slider__item');
+    const sliderItems = Array.from(document.querySelectorAll('.qrb-slider__item'));
     const btnNext = document.querySelector('.btn-next');
     const btnPrev = document.querySelector('.btn-prev');
     const htmlDir = document.documentElement.getAttribute('dir');
 
     let visibleItems = getVisibleItems();
-    let currentIndex = 0;
+    let currentIndex = visibleItems; // Offset to prevent jump
     let autoPlayInterval;
-    let autoPlaySeconds = 3; 
+    let autoPlaySeconds = 3;
+
+    // Clone first few items and append them at the end for seamless transition
+    sliderItems.slice(0, visibleItems).forEach((item) => {
+        let clone = item.cloneNode(true);
+
+        // Fix: Preserve the "img-founder" class if it exists in the original item
+        if (item.querySelector('.img-founder')) {
+            clone.querySelector('.item-img').classList.add('img-founder');
+        }
+
+        sliderWrapper.appendChild(clone);
+    });
 
     function getVisibleItems() {
         const screenWidth = window.innerWidth;
@@ -18,28 +30,31 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function updateButtons() {
-        btnPrev.classList.toggle('disabled', currentIndex === 0);
-        btnNext.classList.toggle('disabled', currentIndex >= sliderItems.length - visibleItems);
+        btnPrev.classList.toggle('disabled', currentIndex === visibleItems);
+        btnNext.classList.toggle('disabled', currentIndex === sliderItems.length);
+        // btnNext.classList.remove('disabled'); // Fix: Next button is always enabled
+        // console.log(currentIndex, sliderItems.length);
+        
     }
 
-    function slideTo(index) {
-        const itemWidth = sliderItems[0].offsetWidth + 30; // Add 25px spacing
+    function slideTo(index, smooth = true) {
+        const itemWidth = sliderItems[0].offsetWidth + 30; // Add spacing
         const directionMultiplier = htmlDir === 'rtl' ? 1 : -1;
-        sliderWrapper.style.transition = "transform 0.3s ease-in-out";
+        sliderWrapper.style.transition = smooth ? "transform 0.3s ease-in-out" : "none";
         sliderWrapper.style.transform = `translateX(${directionMultiplier * index * itemWidth}px)`;
         currentIndex = index;
         updateButtons();
     }
 
     btnNext.addEventListener('click', function () {
-        if (currentIndex < sliderItems.length - visibleItems) {
-            slideTo(currentIndex + 1);
-            restartAutoPlay();
-        }
+        slideTo(currentIndex + 1);
+        restartAutoPlay();
+        // if (currentIndex < sliderItems.length - visibleItems) {
+        // }
     });
 
     btnPrev.addEventListener('click', function () {
-        if (currentIndex > 0) {
+        if (currentIndex > visibleItems) {
             slideTo(currentIndex - 1);
             restartAutoPlay();
         }
@@ -48,11 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
     function startAutoPlay() {
         stopAutoPlay();
         autoPlayInterval = setInterval(() => {
-            if (!document.hidden) {  // Prevents auto-play when the tab is inactive
-                if (currentIndex < sliderItems.length - visibleItems) {
+            if (!document.hidden) {  // Prevent auto-play when tab is inactive
+                if (currentIndex < sliderItems.length) {
                     slideTo(currentIndex + 1);
                 } else {
-                    slideTo(0);
+                    slideTo(visibleItems, false); // Instantly reset position for seamless looping
+                    setTimeout(() => slideTo(visibleItems + 1), 50); // Delay for smooth transition
                 }
             }
         }, autoPlaySeconds * 1000);
@@ -69,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function handleResize() {
         visibleItems = getVisibleItems(); // Update visible items
-        slideTo(0); // Reset slider position
+        slideTo(visibleItems, false); // Reset slider position
     }
 
     window.addEventListener("resize", handleResize);
@@ -77,6 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
     sliderWrapper.addEventListener('mouseenter', stopAutoPlay);
     sliderWrapper.addEventListener('mouseleave', startAutoPlay);
 
+    slideTo(visibleItems, false); // Set initial position
     startAutoPlay();
     updateButtons();
 

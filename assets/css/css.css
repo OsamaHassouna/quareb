@@ -366,8 +366,8 @@ header{
   align-items: flex-start;
   width: 100%;
   gap: 30px;
-  padding-inline-start: 1px;
-  transition: 0.3s all ease-in-out;
+  padding-inline-start: 2px;
+  /* transition: 0.3s all ease-in-out; */
 }
 .qrb-slider__items .qrb-slider__item {
   width: calc(100% / 3 - 22px);
