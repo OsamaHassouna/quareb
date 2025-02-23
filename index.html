@@ -27,18 +27,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
 
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Tajawal:wght@300;400;500;700;800;900&display=swap"
         rel="preload" as="style">
-    <link rel="preload" href="./assets/css/css.css" as="style" />
+    <!-- <link rel="preload" href="./assets/css/css.css" as="style" />
     <link rel="preload" href="./assets/media/hero-bg.png" as="image">
     <link rel="preload" href="./assets/media/eissa.png" as="image">
     <link rel="preload" href="./assets/media/amira.png" as="image">
-    <link rel="preload" href="./assets/media/mariam.png" as="image">
+    <link rel="preload" href="./assets/media/mariam.png" as="image"> -->
     <!-- <link rel="preload" href="./assets/media/hero-pattern.svg" as="image"> -->
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link href="./assets/css/css.css" rel="stylesheet" />
 </head>
 
@@ -52,7 +52,7 @@
                 </a>
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
@@ -469,89 +469,8 @@
     </footer>
 
     <!-- scripts -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const sliderWrapper = document.querySelector('.qrb-slider__items'); 
-            const sliderItems = document.querySelectorAll('.qrb-slider__item');
-            const btnNext = document.querySelector('.btn-next');
-            const btnPrev = document.querySelector('.btn-prev');
-            const htmlDir = document.documentElement.getAttribute('dir');
-
-            let visibleItems = getVisibleItems();
-            let currentIndex = 0;
-            let autoPlayInterval;
-            let autoPlaySeconds = 3; 
-
-            function getVisibleItems() {
-                const screenWidth = window.innerWidth;
-                if (screenWidth < 800.98) return 1; // Mobile: 1 item visible
-                if (screenWidth < 1199.98) return 2; // Tablet: 2 items visible
-                return 3; // Default: 3 items visible (desktop)
-            }
-
-            function updateButtons() {
-                btnPrev.classList.toggle('disabled', currentIndex === 0);
-                btnNext.classList.toggle('disabled', currentIndex >= sliderItems.length - visibleItems);
-            }
-
-            function slideTo(index) {
-                const itemWidth = sliderItems[0].offsetWidth + 30; // Add 25px spacing
-                const directionMultiplier = htmlDir === 'rtl' ? 1 : -1;
-                sliderWrapper.style.transition = "transform 0.3s ease-in-out";
-                sliderWrapper.style.transform = `translateX(${directionMultiplier * index * itemWidth}px)`;
-                currentIndex = index;
-                updateButtons();
-            }
-
-            btnNext.addEventListener('click', function () {
-                if (currentIndex < sliderItems.length - visibleItems) {
-                    slideTo(currentIndex + 1);
-                    restartAutoPlay();
-                }
-            });
-
-            btnPrev.addEventListener('click', function () {
-                if (currentIndex > 0) {
-                    slideTo(currentIndex - 1);
-                    restartAutoPlay();
-                }
-            });
-
-            function startAutoPlay() {
-                stopAutoPlay();
-                autoPlayInterval = setInterval(function () {
-                    if (currentIndex < sliderItems.length - visibleItems) {
-                        slideTo(currentIndex + 1);
-                    } else {
-                        slideTo(0);
-                    }
-                }, autoPlaySeconds * 1000);
-            }
-
-            function stopAutoPlay() {
-                clearInterval(autoPlayInterval);
-            }
-
-            function restartAutoPlay() {
-                stopAutoPlay();
-                startAutoPlay();
-            }
-
-            function handleResize() {
-                visibleItems = getVisibleItems(); // Update visible items
-                slideTo(0); // Reset slider position
-            }
-
-            window.addEventListener("resize", handleResize);
-
-            sliderWrapper.addEventListener('mouseenter', stopAutoPlay);
-            sliderWrapper.addEventListener('mouseleave', startAutoPlay);
-
-            startAutoPlay();
-            updateButtons();
-        });
-    </script>
     <script src="./assets/vendors/bootstrap.bundle.min.js" defer></script>
+    <script src="./assets/js/js.js" defer></script>
 
 </body>
 
