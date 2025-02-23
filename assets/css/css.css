@@ -187,11 +187,11 @@ header{
   isolation: isolate;
   overflow: clip;
 }
-.qrb-hero{
+/* .qrb-hero{
   font-display: swap;
   content-visibility: auto;
   will-change: opacity, transform;
-}
+} */
 .qrb-hero::before{
   content: '';
   position: absolute;
