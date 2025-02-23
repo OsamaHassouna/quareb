@@ -154,10 +154,27 @@ header{
   padding: 8px;
   font-size: 12px;
   font-weight: 400;
+  width: max-content;
 }
 .qrb-header .header-toolbar .qrb-btn.btn-primary img{
   width: 16px;
   margin-inline-end: 5px;
+}
+@media screen and (max-width: 1199.98px){
+  .qrb-header .navbar-nav {
+      gap: 5px;
+  }
+  
+  .qrb-header .navbar-nav .nav-item .nav-link {
+      min-width: max-content;
+  }
+}
+@media screen and (max-width: 991.98px){
+  .qrb-header .navbar-brand {min-width: max-content;}
+  .qrb-header .navbar {
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
 /*=============*/
 /* Hero */
@@ -310,6 +327,18 @@ header{
   border-color: #081776;
   color: #F3C15E;
 }
+@media screen and (max-width: 1199.98px){
+  .qrb-hero__card {
+    margin-bottom: 30px;
+    height: calc(100% - 30px);
+  }
+  
+}
+@media screen and (max-width: 767.98px){
+  .qrb-hero .qrb-hero__title{font-size: 39px; line-height: 1.5;}
+  .qrb-hero .qrb-hero__title span{font-size: 38px;}
+  .qrb-hero .qrb-hero__desc{font-size: 22px;}
+}
 /*=============*/
 /* Team */
 .qrb-team__content {
@@ -329,15 +358,13 @@ header{
   position: relative;
   isolation: isolate;
 }
-.qrb-team__slider .wrapper{
+.qrb-team__slider > .wrapper{
   overflow: clip;
 }
-
 .qrb-slider__items {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  /* overflow: clip; */
   gap: 30px;
   padding-inline-start: 1px;
   transition: 0.3s all ease-in-out;
@@ -476,6 +503,29 @@ header{
 .qrb-team__slider .qrb-slider__arrow .btn-next svg {
   transform: scaleX(-1);
 }
+@media screen and ( max-width: 1199.98px){
+  .qrb-slider__items .qrb-slider__item {
+      width: calc(100% / 2 - 22px);
+  }
+}
+/* @media screen and ( max-width: 767.98px){
+} */
+@media screen and (max-width: 800.98px){
+  .qrb-slider__items .qrb-slider__item {
+    width: calc(100% - 22px);
+  }
+  .qrb-team__slider .qrb-slider__arrow {
+      bottom: -30px;
+      height: 48px;
+      z-index: 1;
+  }
+  .qrb-team__slider .qrb-slider__arrow .btn-prev{
+      margin-inline-start: calc(50% - 30px);
+  }
+  .qrb-team__slider .qrb-slider__arrow .btn-next{
+      margin-inline-end: calc(50%);
+  }
+}
 /*=============*/
 /* Programs */
 .qrb-programs {
@@ -496,9 +546,9 @@ header{
   background: white;
   border-radius: 29px;
   box-shadow: 0px 4px 4px 0px #00000040;
-  height: 100%;
+  height: calc(100% - 60px);
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .qrb-program .qrb-program__icon {
   display: inline-flex;
