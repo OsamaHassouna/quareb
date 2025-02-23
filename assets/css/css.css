@@ -178,6 +178,7 @@ header{
 }
 /*=============*/
 /* Hero */
+
 .qrb-hero {
   padding: 70px;
   background: #3C7BFE;
@@ -185,6 +186,11 @@ header{
   position: relative;
   isolation: isolate;
   overflow: clip;
+}
+.qrb-hero{
+  font-display: swap;
+  content-visibility: auto;
+  will-change: opacity, transform;
 }
 .qrb-hero::before{
   content: '';
