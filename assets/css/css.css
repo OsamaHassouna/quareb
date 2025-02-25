@@ -128,7 +128,9 @@ header{
   line-height: 17px;
   color: #051878;
 }
-
+.qrb-header .navbar-nav .nav-item .nav-link.active {
+  color: black;
+}
 .qrb-header .header-toolbar {
   display: flex;
   align-items: center;
@@ -137,6 +139,11 @@ header{
 .qrb-header .header-toolbar .qrb-btn.btn-link{
   margin-inline-end: 11px;
   position: relative;
+  width: 36px;
+  height: 36px;
+  background: #3C7BFE;
+  color: white;
+  font-weight: 600;
 }
 .qrb-header .header-toolbar .qrb-btn.btn-link::after{
   content: '';
@@ -151,13 +158,13 @@ header{
   cursor: default;
 }
 .qrb-header .header-toolbar .qrb-btn.btn-primary{
-  padding: 8px;
-  font-size: 12px;
+  padding: 14px 24px;
+  font-size: 14px;
   font-weight: 400;
   width: max-content;
 }
 .qrb-header .header-toolbar .qrb-btn.btn-primary img{
-  width: 16px;
+  width: 24px;
   margin-inline-end: 5px;
 }
 @media screen and (max-width: 1199.98px){
@@ -214,7 +221,7 @@ header{
 }
 .qrb-hero .qrb-hero__title span {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 59px;
   line-height: 54px;
   text-align: center;
   color: #081776;
@@ -227,11 +234,11 @@ header{
 }
 .qrb-hero .qrb-hero__desc {
   font-weight: 400;
-  font-size: 32px;
+  font-size: 24px;
   line-height: 46px;
   text-align: center;
   color: white;
-  margin-bottom: 38px;
+  margin-bottom: 50px;
 }
 .qrb-hero__card {
   transition: 0.3s all ease-in-out;
@@ -324,7 +331,9 @@ header{
   border: 1px solid #A1BDE5;
   padding: 16px 40px;
   color: #090940;
-  min-width: 260px;
+  max-width: 260px;
+  text-transform: uppercase;
+  width: 100%;
 }
 
 .qrb-hero__card:hover{transition: 0.3s all ease-in-out; background-color: white;}
@@ -456,6 +465,7 @@ header{
   z-index: -1;
   top: 20px;
 }
+[dir='ltr'] .qrb-slider__items .qrb-slider__item .item-img::before {inset-inline-start: -24px;}
 .qrb-slider__items .qrb-slider__item .item-img::after {
   content: '';
   width: 268px;
@@ -506,9 +516,8 @@ header{
 .qrb-team__slider .qrb-slider__arrow .btn-next {
   inset-inline-end: -48px;
 }
-.qrb-team__slider .qrb-slider__arrow .btn-next svg {
-  transform: scaleX(-1);
-}
+[dir='rtl'] .qrb-team__slider .qrb-slider__arrow .btn-next svg {transform: scaleX(-1);}
+[dir='ltr'] .qrb-team__slider .qrb-slider__arrow .btn-prev svg {transform: scaleX(-1);}
 @media screen and ( max-width: 1199.98px){
   .qrb-slider__items .qrb-slider__item {
       width: calc(100% / 2 - 22px);
@@ -583,7 +592,8 @@ header{
   line-height: 28px;
   text-align: start;
   color: #051878;
-  max-width: 50%;
+  /* max-width: 50%; */
+  max-width: 250px;
   margin-bottom: 13px;
 }
 .qrb-program .qrb-program__desc {
@@ -678,6 +688,10 @@ header{
   background: #C1D4F2;
   color: #081776;
 }
+.qrb-program:hover .qrb-program__actions .qrb-btn {
+  background: #051878;
+  color: #F3C15E;
+}
 
 .qrb-program.program-second .qrb-program__icon {
   margin-top: -25px;
@@ -686,8 +700,8 @@ header{
   rotate: -45deg;
   top: -9px;
   background: #6295FF;
-   inset-inline-start: auto;
-   inset-inline-end: -20px;
+  inset-inline-start: auto;
+  inset-inline-end: -20px;
 }
 .qrb-program.program-second .qrb-program__img:before{
   background: #6295FF1A;
@@ -702,10 +716,7 @@ header{
 .qrb-program.program-second .qrb-program__doctors .doctor-img::after{
   inset-inline-start: -1px;
 }
-.qrb-program.program-second .qrb-program__actions .qrb-btn {
-  background: #051878;
-  color: #F3C15E;
-}
+
 
 /*=============*/
 /* Footer */
@@ -734,7 +745,7 @@ header{
 .qrb-footer .qrb-footer__desc {
   font-weight: 300;
   font-size: 14px;
-  line-height: 17px;
+  line-height: 24px;
   color: white;
 }
 .qrb-footer .qrb-footer__links h3 {
