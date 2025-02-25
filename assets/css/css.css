@@ -862,12 +862,13 @@ header{
 }
 .qrb-page-title .qrb-page-title__desc {
   font-weight: 400;
-  font-size: 24px;
-  line-height: 46px;
+  font-size: 20px;
+  line-height: 29px;
   text-align: center;
   color: white;
+  padding: 0 30px;
 }
-
+/*=============*/
 /* Programs Page */
 .qrb-programs-page .qrb-programs {
   padding-block: 100px 60px;
@@ -877,7 +878,7 @@ header{
   padding-block: 0 44px;
 }
 .qrb-programs-page .qrb-program.program-second .qrb-program__doctors .doctor-img:before {inset-inline-start: -7px;}
-
+/*=============*/
 /* Self Help AI Page */
 .qrb-selfhelp-page .qrb-page-title__desc {
   max-width: 30vw;
@@ -886,7 +887,6 @@ header{
 .qrb-selfhelp-page .qrb-selfhelp {
   padding-block: 40px 100px;
 }
-
 .qrb-selfhelp-page .qrb-selfhelp .qrb-selfhelp__content > h2 {
   font-weight: 700;
   font-size: 32px;
@@ -972,6 +972,137 @@ header{
 }
 .assessments.assessment-female ul li:hover .assessment-item .item-actions .qrb-btn.btn-arrow {
   background: #F3C15E;
+  color: #051878;
+}
+/*=============*/
+/* ABout */
+.qrb-about {
+  padding-block: 70px 130px;
+}
+.qrb-about__content {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  justify-content: center;
+}
+.qrb-about__content .qrb-about__img img {
+  width: 407px;
+  height: 277px;
+  border-radius: 29px;
+  object-fit: cover;
+}
+.qrb-about__content .qrb-about__text p{
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #051878;
+}
+.qrb-about__content .qrb-about__text p:not(:last-child){
+  margin-bottom: 30px;
+}
+.qrb-about__content .qrb-about__text p .text-warning{
+  color: #F3C15E;
+  font-weight: 700;
+}
+.qrb-about-are__content {
+  padding: 60px 60px;
+  border-radius: 29px;
+  background: #E3EDFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 115px;
+}
+.qrb-about-are__content > * {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+}
+.qrb-about-are__content > *:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background: #344491;
+  top: 90px;
+  inset-inline-end: 0;
+}
+.qrb-about-are__content .about-are__letter {
+  font-weight: 275;
+  font-size: 128px;
+  line-height: 99px;
+  color: #344491;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  isolation: isolate;
+}
+.qrb-about-are__content .about-are__letter::before{
+  content: '';
+  position: absolute;
+  width: 74px;
+  height: 74px;
+  border-radius: 100%;
+  background: #F3C15E;
+  z-index: -1;
+  bottom: 0;
+  inset-inline: 0;
+  margin-inline: auto;
+}
+.qrb-about-are__content .about-are__title {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 48.5px;
+  color: #344491;
+  text-align: center;
+   margin-bottom: 25px;
+}
+.qrb-about-are__content .about-are__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  position: relative;
+  isolation: isolate;
+  color: #344491;
+}
+.qrb-about-are__content .about-are__icon::before {
+  content: '';
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  background: #F3C15E;
+  border-radius: 100%;
+  z-index: -1;
+  top: 0;
+}
+.qrb-about-are__content .about-are__r .about-are__icon::before {
+  top: 15px;
+}
+.qrb-about-are__content .about-are__e .about-are__icon::before {
+  bottom: 15px;
+  top: auto;
+}
+.qrb-about-mission__content {
+  display: flex;
+  align-items: center;
+  gap: 30px 50px;
+  margin-bottom: 105px;
+}
+.qrb-about-mission__content .qrb-about-mission__img img {
+  width: 236px;
+  height: 109px;
+  object-fit: cover;
+}
+.qrb-about-mission__content .qrb-about-mission__text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
   color: #051878;
 }
 /*=============*/
