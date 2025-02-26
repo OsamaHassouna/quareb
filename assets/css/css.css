@@ -1443,6 +1443,72 @@ header{
   flex-wrap: wrap;
 }
 /*=============*/
+/* Contact Us*/
+.qrb-contact-page .qrb-contact__content {
+  padding-block: 85px 120px;
+}
+.qrb-contact-page .qrb-direct-contact{
+  display: flex;
+  align-items: center;
+   gap: 75px;
+  margin-bottom: 80px;
+}
+.qrb-contact-page .qrb-direct-contact > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  width: max-content;
+  color: #051878;
+}
+.qrb-contact-page .qrb-direct-contact > a img{
+  width: 83px;
+  height: 83px;
+  object-fit: cover;
+}
+.form-group {
+  margin-bottom: 25px;
+}
+.form-group > label{
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: #051878;
+  margin-bottom: 17px;
+}
+.form-control {
+  display: inline-flex;
+  align-items: center;
+  padding: 20px 30px;
+  border-radius: 29px;
+  line-height: 24px;
+  border: 1px solid #D3D3D3;
+  color: #051878;
+}
+.form-control:focus,
+.form-control:focus-visible{
+  outline: 0;
+  box-shadow: none;
+  border-color: #051878;
+  color: #051878;
+}
+.form-control::placeholder{
+  color: rgb(5 24 120 / 40%);
+}
+form .form-actions {
+  text-align: center;
+}
+form .form-actions > .qrb-btn {
+  padding: 25px 60px;
+  border-radius: 29px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 25px;
+  color: white;
+}
+/*=============*/
 /* General */
 /* .text-warning {
   color: var(--clr-warning);
