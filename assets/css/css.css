@@ -1509,6 +1509,58 @@ form .form-actions > .qrb-btn {
   color: white;
 }
 /*=============*/
+/* FAQ */
+.qrb-faq-page .qrb-faq__content {padding-block: 85px 120px;}
+.qrb-accordion .accordion-item{
+    border: 0;
+    border-bottom: 1px solid #EBEBEC;
+}
+.qrb-accordion .accordion-item:not(:last-child){
+    margin-bottom: 25px;
+}
+.qrb-accordion .accordion-item .accordion-header {
+  position: relative;
+}
+.qrb-accordion .accordion-item .accordion-header .accordion-button {
+  background: transparent;
+  border-radius: 0;
+  padding-block: 0 25px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #051878;
+  padding-inline: 16px;
+}
+.qrb-accordion .accordion-item .accordion-header .accordion-button::after{
+ content: none;
+}
+.qrb-accordion .accordion-item .accordion-header .collapse-icon {
+  position: absolute;
+  top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset-inline-end: 16px;
+  transition: all 0.2s ease-in-out;
+  z-index: 1;
+  color: #051878;
+}
+.qrb-accordion .accordion-item .accordion-header .accordion-button.collapsed + .collapse-icon {
+  color: #051878;
+}
+
+.qrb-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) + .collapse-icon {
+  transform: rotate(45deg);
+  color: #F3C15E;
+  transition: all 0.2s ease-in-out;
+}
+.qrb-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed){color: #F3C15E;}
+.qrb-accordion .accordion-item .accordion-header .accordion-button:focus{
+    outline: 0;
+    box-shadow: none;
+}
+.qrb-accordion .accordion-item .accordion-body{padding-block: 0 25px;padding-inline: 16px;max-width: 95%;font-weight: 400;font-size: 16px;line-height: 30px;color: #051878;}
+/*=============*/
 /* General */
 /* .text-warning {
   color: var(--clr-warning);
