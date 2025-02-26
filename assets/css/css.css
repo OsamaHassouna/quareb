@@ -1341,6 +1341,7 @@ header{
   color: #051878;
   border: 1px solid #051878;
 }
+.qrb-btn.btn-outline:hover,
 .qrb-btn.btn-outline.active{
   color: #051878;
   background: #E3EDFF;
