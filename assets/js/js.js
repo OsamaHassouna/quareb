@@ -95,6 +95,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const profileContainer = document.querySelector(".profile-container");
+    if(profileContainer){
+        document.querySelector(".qrb-btn.btn-profile").addEventListener("click", function () {
+            // const profileContainer = document.querySelector(".profile-container");
+            
+            if (profileContainer.classList.contains("active")) {
+                profileContainer.style.height = profileContainer.scrollHeight + "px"; // Set current height
+                setTimeout(() => {
+                    profileContainer.style.height = "0px"; // Animate to zero height
+                }, 10);
+            } else {
+                profileContainer.style.height = profileContainer.scrollHeight + "px"; // Expand smoothly
+                setTimeout(() => {
+                    profileContainer.style.height = "auto"; // Allow natural height after animation
+                }, 400);
+            }
+
+            this.classList.toggle("active");
+            profileContainer.classList.toggle("active");
+        });
+    }
+});
 // Fade-in effect for sections
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
@@ -127,3 +150,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+

@@ -137,7 +137,7 @@
             <div class="container">
                 <div class="doctor-profile">
                     <div class="row justify-content-center">
-                        <div class="col-lg-9">
+                        <div class="col-lg-10">
                             <div class="doctor-profile__wrapper">
                                 <div class="doctor-profile__content">
                                     <div class="qrb-doctor__img img-founder">
@@ -307,27 +307,6 @@
         </div>
     </footer>
 
-    <!-- scripts -->
-     <script>
-        document.querySelector(".qrb-btn.btn-profile").addEventListener("click", function () {
-            const profileContainer = document.querySelector(".profile-container");
-            
-            if (profileContainer.classList.contains("active")) {
-                profileContainer.style.height = profileContainer.scrollHeight + "px"; // Set current height
-                setTimeout(() => {
-                    profileContainer.style.height = "0px"; // Animate to zero height
-                }, 10);
-            } else {
-                profileContainer.style.height = profileContainer.scrollHeight + "px"; // Expand smoothly
-                setTimeout(() => {
-                    profileContainer.style.height = "auto"; // Allow natural height after animation
-                }, 400);
-            }
-
-            this.classList.toggle("active");
-            profileContainer.classList.toggle("active");
-        });
-     </script>
     <!-- <script src="./assets/vendors/bootstrap.bundle.min.js" defer></script> -->
     <script src="./assets/js/js.js" defer></script>
 

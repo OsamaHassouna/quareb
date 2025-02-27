@@ -1058,7 +1058,6 @@ header{
   margin-inline: auto;
 }
 .qrb-about-are__content .about-are__title {
-  font-family: Poppins;
   font-weight: 700;
   font-size: 24px;
   line-height: 48.5px;
@@ -1301,21 +1300,28 @@ header{
   align-items: flex-end;
   gap: 24px;
 }
+[dir="rtl"] .qrb-doctor-page .doctor-profile__content {gap: 48px;}
+
 .qrb-doctor-page .doctor-profile__content .qrb-doctor__img {
   position: relative;
   isolation: isolate;
 }
 .qrb-doctor-page .doctor-profile__content .qrb-doctor__img::before{
-   content: '';
-   position: absolute;
-   width: 227px;
-   height: 193px;
-   border-radius: 100%;
-   background: #F3C15E;
-   z-index: -1;
-   rotate: -45deg;
-   inset-inline-start: -30px;
-   /* top: -9px; */
+  content: '';
+  position: absolute;
+  width: 227px;
+  height: 193px;
+  border-radius: 100%;
+  background: #F3C15E;
+  z-index: -1;
+  rotate: -45deg;
+  /* top: -9px; */
+}
+[dir="ltr"] .qrb-doctor-page .doctor-profile__content .qrb-doctor__img::before{
+  inset-inline-start: -30px;
+}
+[dir="rtl"] .qrb-doctor-page .doctor-profile__content .qrb-doctor__img::before{
+  inset-inline-end: -30px;
 }
 .qrb-doctor-page .doctor-profile__content .qrb-doctor__img.img-founder img{padding-top: 10px;}
 .qrb-doctor-page .doctor-profile__content .qrb-doctor__img.img-founder::before{
@@ -1325,7 +1331,7 @@ header{
   height: auto;
   width: 100%;
   object-fit: cover;
-  max-width: 210px;
+  width: 210px;
 }
 .qrb-doctor-page .doctor-profile__content .qrb-doctor__img::after {
   content: '';
@@ -1403,7 +1409,6 @@ header{
   color: #051878;
 }
 .qrb-doctor-page .doctor-profile__session > ul li p{
-  font-family: Poppins;
   font-weight: 400;
   font-size: 16px;
   line-height: 23px;
@@ -1440,7 +1445,6 @@ header{
 }
 
 .qrb-doctor-page .doctor-profile__profile p {
-  font-family: Poppins;
   font-weight: 400;
   font-size: 16px;
   line-height: 22.86px;
