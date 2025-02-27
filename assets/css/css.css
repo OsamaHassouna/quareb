@@ -141,6 +141,7 @@ body {
 }
 /*=============*/
 /* Header */
+body{position: relative;}
 header{
   border-bottom: 1px solid #00000033;
 }
@@ -215,6 +216,31 @@ header{
   .qrb-header .navbar {
     width: 100%;
     justify-content: flex-end;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-collapse {
+    position: absolute;
+    z-index: 9;
+    width: 250px;
+    height: max-content;
+    top: 80px;
+    inset-inline-end: -100px;
+    background: rgba(255,255,255,0.9);
+    /* background: white; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding-block: 16px;
+    text-align: center;
+  }
+  .navbar-collapse .navbar-nav .nav-item .nav-link {
+    font-size: 18px;
+    padding: 10px;
+    min-height: 40px;
   }
 }
 /*=============*/
@@ -384,6 +410,7 @@ header{
   
 }
 @media screen and (max-width: 767.98px){
+  .qrb-hero{padding-inline: 20px;}
   .qrb-hero .qrb-hero__title{font-size: 39px; line-height: 1.5;}
   .qrb-hero .qrb-hero__title span{font-size: 38px;}
   .qrb-hero .qrb-hero__desc{font-size: 22px;}
@@ -742,7 +769,17 @@ header{
   inset-inline-start: -1px;
 }
 
-
+@media screen and (max-width: 767.98px) {
+  .qrb-program .qrb-program__img{
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  .qrb-program .qrb-program__doctors {
+    justify-content: center;
+    margin-block: 30px;
+}
+}
 /*=============*/
 /* Footer */
 .qrb-footer {
@@ -815,10 +852,17 @@ header{
   line-height: 20px;
   color: white;
 }
-@media screen and (max-width: 991.98px){
+@media screen and (max-width: 991.98px) {
+  .qrb-footer .qrb-footer__links{margin-top: 30px;}
+}
+@media screen and (min-width: 575.98px) and (max-width: 991.98px) {
+  .qrb-footer .qrb-footer__links{margin-top: 30px;}
   .qrb-footer .qrb-footer__links.links-first{place-self: start;}
   .qrb-footer .qrb-footer__links.links-second{place-self: center;}
   .qrb-footer .qrb-footer__links.links-third{place-self: end;}
+}
+@media screen and (min-width: 575.98px){
+  .qrb-hero__card {padding-inline: 10px;}
 }
 /*=============*/
 /* Pages Title */
@@ -982,6 +1026,15 @@ header{
   background: #F3C15E;
   color: #051878;
 }
+@media screen and (max-width: 991.98px) {
+  .qrb-selfhelp-page .qrb-page-title__desc {
+    max-width: 100%;
+  }
+
+  .assessments.assessment-female {
+    margin-top: 50px;
+  }
+}
 /*=============*/
 /* ABout */
 .qrb-about {
@@ -1112,6 +1165,26 @@ header{
   font-size: 20px;
   line-height: 32px;
   color: #051878;
+}
+@media screen and (max-width: 991.98px) {
+  .qrb-about-mission__content,
+  .qrb-about__content{flex-wrap: wrap;}
+  .qrb-about__content .qrb-about__img img{width: 100%; height: auto;}
+  .qrb-about-are__content{
+    flex-wrap: wrap;
+    gap: 100px;
+    padding-inline: 20px;
+  }
+  .qrb-about-are__content > * {
+    flex: 100%;
+    flex-shrink: 0;
+  }
+  .qrb-about-are__content > *:not(:last-child)::before{
+    inset-inline: 0;
+    margin-inline: auto;
+    top: auto;
+    bottom: -50px;
+  }
 }
 /*=============*/
 /* Book Page || list */
@@ -1270,6 +1343,14 @@ header{
   font-size: 14px;
   font-weight: 500;
   color: #677D9D;
+}
+
+@media screen and (max-width: 991.98px) {
+  .qrb-doctor__card,
+  .qrb-doctor__card .doctor-card__content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 /*=============*/
 /* Doctor || single */
@@ -1470,6 +1551,13 @@ header{
   gap: 8px;
   flex-wrap: wrap;
 }
+@media screen and (max-width:991.98px){
+  .qrb-doctor-page .doctor-profile__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 50px;
+  }
+}
 /*=============*/
 /* Contact Us*/
 .qrb-contact-page .qrb-contact__content {
@@ -1536,6 +1624,16 @@ form .form-actions > .qrb-btn {
   line-height: 25px;
   color: white;
 }
+@media screen and (max-width:991.98px){
+  .qrb-contact-page .qrb-direct-contact {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .qrb-page-title {
+    padding-inline: 30px;
+  }
+}
 /*=============*/
 /* FAQ */
 .qrb-faq-page .qrb-page-title__desc > a.btn-link {
@@ -1596,6 +1694,16 @@ form .form-actions > .qrb-btn {
     box-shadow: none;
 }
 .qrb-accordion .accordion-item .accordion-body{padding-block: 0 25px;padding-inline: 16px;max-width: 95%;font-weight: 400;font-size: 16px;line-height: 30px;color: #051878;}
+@media screen and (max-width:991.98px){
+  .qrb-accordion .accordion-item .accordion-header .accordion-button {
+    padding-inline-end: 40px;
+    text-align: start;
+  }
+  .qrb-page-title::before{
+    background-size: 80vh;
+  }
+}
+
 /*=============*/
 /* General */
 /* .text-warning {
