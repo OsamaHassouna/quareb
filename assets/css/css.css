@@ -1558,6 +1558,14 @@ header{
     row-gap: 50px;
   }
 }
+@media screen and (max-width:575.98px){
+  .qrb-doctor-page .doctor-profile__content{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .qrb-doctor-page .doctor-profile__content .qrb-doctor_info p{max-width: 100%;}
+  [dir="rtl"] .qrb-doctor-page .doctor-profile__content{row-gap: 24px;text-align: center;}
+}
 /*=============*/
 /* Contact Us*/
 .qrb-contact-page .qrb-contact__content {
