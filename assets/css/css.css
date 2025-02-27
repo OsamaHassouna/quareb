@@ -815,7 +815,11 @@ header{
   line-height: 20px;
   color: white;
 }
-
+@media screen and (max-width: 991.98px){
+  .qrb-footer .qrb-footer__links.links-first{place-self: start;}
+  .qrb-footer .qrb-footer__links.links-second{place-self: center;}
+  .qrb-footer .qrb-footer__links.links-third{place-self: end;}
+}
 /*=============*/
 /* Pages Title */
 .qrb-page-title{
