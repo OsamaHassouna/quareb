@@ -861,8 +861,17 @@ header{
   .qrb-footer .qrb-footer__links.links-second{place-self: center;}
   .qrb-footer .qrb-footer__links.links-third{place-self: end;}
 }
-@media screen and (min-width: 575.98px){
+@media screen and (max-width: 575.98px){
   .qrb-hero__card {padding-inline: 10px;}
+  .qrb-footer {
+    text-align: center;
+  }
+  .qrb-footer .qrb-footer__logo {
+    margin-inline: auto;
+  }
+  .qrb-footer .qrb-footer__links ul.footer-social{
+    justify-content: center;
+  }
 }
 /*=============*/
 /* Pages Title */
@@ -1027,8 +1036,13 @@ header{
   color: #051878;
 }
 @media screen and (max-width: 991.98px) {
+  .qrb-page-title .qrb-page-title__title,
+  .qrb-page-title .qrb-page-title__title span {
+    font-size: clamp(40px, 7vw, 59px);
+  }
   .qrb-selfhelp-page .qrb-page-title__desc {
     max-width: 100%;
+    font-size: clamp(18px, 7vw, 20px);
   }
 
   .assessments.assessment-female {
