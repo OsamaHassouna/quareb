@@ -118,6 +118,9 @@ function initProfileToggle() {
 function initFadeInEffect() {
     const sections = document.querySelectorAll("section");
     if (!sections.length) return;
+    if (window.innerWidth <= 767) return;
+    console.log(window.innerWidth);
+    
 
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
