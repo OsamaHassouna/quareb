@@ -966,6 +966,9 @@ header{
   background: #E3EDFF;
   color: #6295FF;
 }
+[dir="rtl"] .assessments .assessment-item .item-actions .qrb-btn.btn-arrow {
+  transform: scaleX(-1);
+}
 .assessments.assessment-male ul li:hover .assessment-item .item-actions .qrb-btn.btn-arrow {
   background: #051878;
   color: #F3C15E;
@@ -1013,6 +1016,7 @@ header{
   justify-content: center;
   gap: 30px;
   margin-bottom: 115px;
+  direction: ltr;
 }
 .qrb-about-are__content > * {
   flex: 1;
@@ -1134,16 +1138,13 @@ header{
 .qrb-doctor__card .qrb-doctor__img::before{
    content: '';
    position: absolute;
-   width: 279px;
-   height: 237px;
+   width: 264px;
+   height: 224px;
    border-radius: 100%;
    background: #F3C15E;
    z-index: -1;
    rotate: -45deg;
-   inset-inline-start: -30px;
-   /* top: -9px; */
 }
-.qrb-doctor__card .qrb-doctor__img.img-founder img{padding-top: 10px;}
 .qrb-doctor__card .qrb-doctor__img.img-founder::before{
    background: #6295FF;
 }
@@ -1151,7 +1152,9 @@ header{
   height: auto;
   width: 100%;
   object-fit: cover;
-  max-width: 320px;
+  /* max-width: 320px; */
+  width: 222px;
+  padding-top: 0px;
 }
 .qrb-doctor__card .qrb-doctor__img::after {
   content: '';
@@ -1162,6 +1165,17 @@ header{
   position: absolute;
   inset-inline-start: -2px;
 }
+[dir='ltr'] .qrb-doctor__card .qrb-doctor__img::before {
+  inset-inline-start: -30px;
+  top: -9px;
+}
+[dir='rtl'] .qrb-doctor__card .qrb-doctor__img::before {
+  inset-inline-end: -30px;
+  top: -7px;
+}
+/* [dir='rtl'] .qrb-doctor__card .qrb-doctor__img img{
+  max-width: 259px;
+} */
 .qrb-doctor__card .qrb-doctor_info > h3 {
   font-weight: 700;
   font-size: 24px;
@@ -1215,6 +1229,9 @@ header{
   color: #081776;
   text-align: center;
   margin-bottom: 16px;
+}
+.doctor-card__actions .qrb-btn.btn-ligh-primary {
+  min-width: 165px;
 }
 .qrb-btn.btn-ligh-primary {
   background: #C1D4F2;
@@ -1511,6 +1528,14 @@ form .form-actions > .qrb-btn {
 }
 /*=============*/
 /* FAQ */
+.qrb-faq-page .qrb-page-title__desc > a.btn-link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  text-decoration: underline;
+  color: white;
+}
 .qrb-faq-page .qrb-faq__content {padding-block: 85px 120px;}
 .qrb-accordion .accordion-item{
     border: 0;
