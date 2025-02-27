@@ -907,7 +907,8 @@ header{
   align-items: center;
   gap: 35px;
   margin-bottom: 50px;
-  margin-inline-start: 50px;
+  /* margin-inline-start: 50px; */
+  justify-content: center;
 }
 .assessments .assessments-title h2{
   font-weight: 700;
