@@ -1831,6 +1831,7 @@ header{
   --step-number-width: 43px;
   --step-mb: 56px;
   position: relative;
+  isolation: isolate;
   display: flex;
   align-items: flex-start;
   gap: var(--step-space, 83px);
@@ -2115,11 +2116,132 @@ header{
   inset-inline-start: -15px;
 }
 .qrb-program__doctor .program-doctor__content li:not(:last-child){margin-bottom: 34px;}
-
+/*=============*/
+.qrb-program__features .program-features {
+  padding-block: 60px 200px;
+}
+.qrb-program__features .program-features .program-features__title {
+  font-weight: 700;
+  font-size: 59px;
+  line-height: 72px;
+  color: #F3C15E;
+  text-align: center;
+  margin-bottom: 51px;
+}
+.qrb-program__features .program-features .program-features__list{
+  padding-inline-start: 20px;
+  margin-bottom: 50px;
+}
+.qrb-program__features .program-features .program-features__list > li {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 51px;
+  color: #051878;
+  position: relative;
+}
+.qrb-program__features .program-features .program-features__list li::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: #051878;
+  inset-inline-start: -20px;
+  top: 25px;
+}
+.qrb-program__features .program-features .program-features__subtitle {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  color: #051878;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.qrb-program__features .program-features .program-features__discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.qrb-program__features .program-features .program-features__discount .discount-item {
+  text-align: center;
+}
+.qrb-program__features .program-features .program-features__discount .discount-item .item-icon {
+  margin-bottom: 30px;
+}
+.qrb-program__features .program-features .program-features__discount .discount-item p {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #051878;
+  text-align: center;
+}
+.qrb-program__features .program-features .program-features__discount .discount-separator{
+  position: relative;
+  isolation: isolate;
+}
+.qrb-program__features .program-features .program-features__discount .discount-separator::before,
+.qrb-program__features .program-features .program-features__discount .discount-separator::after{
+  content:'';
+  position: absolute;
+  width: 67px;
+  height: auto;
+  background: url('../media/arrowRight.svg') no-repeat center;
+  inset-block: 0;
+  margin-block: auto;
+}
+.qrb-program__features .program-features .program-features__discount .discount-separator::before{ inset-inline-start: -78px;transform: scaleX(-1);}
+.qrb-program__features .program-features .program-features__discount .discount-separator::after{ inset-inline-end: -78px;}
+.qrb-program__features .program-features .program-features__discount .discount-separator p {
+  font-family: Poppins;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 37px;
+  color: #051878;
+  text-align: center;
+}
+.qrb-program__features .program-features .program-features__actions {
+  margin-block: 60px;
+  text-align: center;
+}
+.qrb-program__features .program-features .program-features__actions .qrb-btn.btn-primary {
+  padding: 16px 3vw;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: white;
+  text-align: center;
+}
+.qrb-program__features .program-features .program-features__actions .qrb-btn.btn-primary {flex-direction: column;}
+.qrb-program__features .program-features .program-features__actions .action-price {color: #F3C15E;}
+.qrb-program__features .program-features .program-features__actions .action-price .original-price {opacity: 0.54; text-decoration: line-through;}
 @media screen and (min-width: 992px){
   .qrb-program-page .qrb-program__intro .program-intro__content .intro-info p{max-width: 70%;}
   .qrb-program-page .qrb-program__video .program-video h2{max-width: 60%; margin-inline: auto;}
   .qrb-program-page .qrb-program__doctor .program-doctor-img__wrapper {margin-inline-start: 70px;}
+}
+@media screen and (max-width: 991.98px){
+  .qrb-program__duration .program-duration .duration-content {
+    flex-wrap: wrap;
+  }
+  .program-video__link > iframe {width: 100%;}
+  .qrb-accordion.program-accordion {
+    padding-inline: 0;
+  }
+
+  .qrb-program__faq .program-faq__content {
+    margin-inline-start: 0;
+  }
+
+  .program-doctor-img__wrapper {
+    text-align: center;
+  }
+
+  .qrb-program__doctor .program-doctor-img__wrapper h2 {
+    margin-bottom: 20px;
+  }
+
+  .qrb-program__doctor .program-doctor__content {margin-inline-start: 0;}
+
 }
 /*=============*/
 /* General */
