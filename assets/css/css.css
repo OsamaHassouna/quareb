@@ -449,7 +449,7 @@ header{
   width: calc(100% / 3 - 22px);
   text-align: center;
   flex-shrink: 0;
-  padding-inline: 25px;
+  margin-inline: 25px;
   border-radius: 29px;
   margin-bottom: 30px;
   transition: .2s all ease-in-out;
