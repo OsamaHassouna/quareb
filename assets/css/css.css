@@ -2384,8 +2384,448 @@ header{
   }
 }
 /*=============*/
+/* Modal */
+.qrb-modal .modal-content {border-radius: 20px;}
+.qrb-modal .modal-header{padding: 10px 20px;}
+.qrb-modal .modal-header h1{
+    font-size: 16px !important;
+    font-weight: 700;
+    color: #051878;
+}
+.qrb-modal .modal-header .btn-close{ margin: 0;scale: 0.7;}
+.qrb-modal .modal-body {
+  padding: 16px 24px;
+  padding-bottom: 0;
+}
+.qrb-modal .modal-body .form-group > label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.qrb-modal .modal-body .form-group .form-control {
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+.qrb-modal .modal-footer {
+  justify-content: center;
+  border: 0;
+  padding-block: 0 24px;
+}
+.qrb-modal .modal-footer .qrb-btn.btn-primary {
+  padding: 11px 30px;
+  border-radius: 12px;
+  border: 0;
+}
+.qrb-modal .modal-footer .qrb-btn.btn-secondary {
+  padding: 11px 30px;
+  border-radius: 12px;
+  border: 0;
+  background: lightgray;
+  box-shadow: none;
+  font-weight: 500;
+}
+/*=============*/
+/* New Program */
+.qrb-program-page.program-women {
+  padding-top: 60px;
+}
+
+.countdown-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.countdown-wrapper > h2 {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 100%;
+  text-align: center;
+  color: #F3C15E;
+}
+.countdown-wrapper .counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #A1BDE540;
+  border-radius: 15px;
+  border: 1px solid #081776;
+}
+.countdown-wrapper .counter .counter-item {
+  padding: 34px 69px;
+  text-align: center;
+}
+.countdown-wrapper .counter .counter-item:not(:last-child) {
+  border-inline-end: 1px solid #081776;
+}
+.countdown-wrapper .counter .counter-item p {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  color: #081776;
+}
+.countdown-wrapper .counter .counter-item span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #051878;
+}
+
+.qrb-program-page.program-women .qrb-program__intro {
+  padding-block: 0;
+  padding-bottom: 129px;
+}
+.qrb-program-page.program-women .qrb-program__intro h1 {
+  font-weight: 700;
+  font-size: 59px;
+  line-height: 1.14;
+  letter-spacing: 0px;
+  text-align: center;
+  text-transform: capitalize;
+  max-width: 50%;
+  margin-inline: auto;
+  color: #081776;
+  margin-bottom: 45px;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-info h2 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.26;
+  text-transform: capitalize;
+  max-width: 70%;
+  margin-bottom: 20px;
+  color: #6295FF;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-info > p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 143%;
+  letter-spacing: 0px;
+  text-align: right;
+  vertical-align: middle;
+  text-transform: capitalize;
+  color: #081776;
+  max-width: 100%;
+  margin-bottom: 50px;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-info > p span{
+  font-weight: 400;
+  color: #081776;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-actions p{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #EF2727;
+  margin-bottom: 0;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-actions > .qrb-btn.btn-primary{
+  direction: ltr;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 143%;
+  letter-spacing: 0px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 60%;
+  padding: 20px 30px;
+  gap: 10px;
+  color: #081776;
+  background: #F3C15E;
+  max-width: 70%;
+  margin-inline-end: 30px;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-actions > .qrb-btn.btn-primary span{
+  transform: none !important;
+  text-decoration: line-through;
+  color: #677D9D;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-video_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.qrb-program-page.program-women .qrb-program__intro .intro-video_wrapper > img {
+  width: 394px;
+  height: 513px;
+}
+
+.qrb-program-page.program-women .qrb-program__features {
+  padding: 80px 0;
+  text-align: center;
+  background: #FDF4E4;
+}
+.qrb-program-page.program-women .program-features__content > h2 {
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 1.43;
+  color: #081776;
+  margin-bottom: 65px;
+}
+.qrb-program-page.program-women .qrb-features__item .img-wrapper {
+  width: auto;
+  max-height: 80px;
+  margin-bottom: 30px;
+}
+.qrb-program-page.program-women .qrb-features__item .img-wrapper img {
+  width: auto;
+  height: 80px;
+}
+
+.qrb-program-page.program-women .qrb-features__item > p {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.43;
+  text-align: center;
+  color: #3D7CFF;
+  margin-inline: auto;
+  max-width: 20ch;
+}
+.qrb-program-page.program-women .qrb-features__item > p.max-30ch{
+  max-width: 30ch;
+}
+.qrb-program-page.program-women .program-learning__content {
+  padding: 110px 10px;
+}
+.qrb-program-page.program-women .program-learning__content .learning-img-wrapper{
+  margin-bottom: 88px;
+}
+.qrb-program-page.program-women .program-learning__content .learning-list__content > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56.25px;
+  color: #F3C15E;
+  margin-bottom: 25px;
+}
+.qrb-program-page.program-women .program-learning__content .learning-list__content > ul li:not(:last-child){margin-bottom: 20px;}
+.qrb-program-page.program-women .program-learning__content .learning-list__content > ul li .item-title {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.43;
+  color: #4FABF7;
+  margin-bottom: 18px;
+}
+.qrb-program-page.program-women .program-learning__content .learning-list__content > ul li .item-title span{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  background: #F3F3FF;
+  border: 2px solid #2D4DF2;
+  border-radius: 100%;
+  font-weight: 700;
+  font-size:27px;
+  line-height:27px;
+  color: #F3C15E;
+  position: relative;
+  margin-inline-end: 65px;
+}
+.qrb-program-page.program-women .program-learning__content .learning-list__content > ul li .item-title span:before{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background: #2D4DF2;
+  inset-inline-end: -50px;
+  z-index: -1;
+}
+.qrb-program-page.program-women .program-learning__content .learning-list__content > ul li > p{
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.43;
+  color: #081776;
+
+}
+.qrb-program-page.program-women .program-learning__content .learning-actions {
+  text-align: center;
+}
+.qrb-program-page.program-women .program-learning__content .learning-actions .qrb-btn.btn-primary {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.43;
+  text-align: center;
+  text-transform: capitalize;
+  min-width: 60%;
+  padding: 11px 30px;
+  gap: 10px;
+  color: #081776;
+  background: #F3C15E;
+  max-width: 70%;
+  /* margin-inline-end: 0; */
+}
+
+.qrb-program-page.program-women .qrb-program__preorder-benefits {
+  padding: 80px 10px 110px;
+  background: #FDF4E4;
+  text-align: center;
+}
+.qrb-program-page.program-women .program-preorder-benefits__content > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56.5px;
+  color: #051878;
+  margin-bottom: 44px;
+}
+.qrb-program-page.program-women .program-preorder-benefits__content .preorder-benefits__list {text-align: start;}
+.qrb-program-page.program-women .program-preorder-benefits__content .preorder-benefits__list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 40px;
+  padding-inline: 46px;
+  border-bottom: 1px solid #081776;
+  padding-block: 30px;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 1.43;
+  color: #081776;
+}
+.qrb-program-page.program-women .program-preorder-benefits__content .preorder-benefits__list li >p:first-child{width: 391px;}
+.qrb-program-page.program-women .program-preorder-benefits__content .preorder-benefits__list li >p + p,
+.qrb-program-page.program-women .program-preorder-benefits__content .preorder-benefits__list li .list-icon{width: 103px; text-align: center;}
+
+
+
+.qrb-program-page.program-women .program-experts__content .qrb-doctor__card {
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+}
+.qrb-program-page.program-women .program-experts__content .qrb-program {
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+  height: auto;
+}
+.qrb-program-page.program-women .program-experts__content {
+  padding: 56px 20px 140px;
+  text-align: center;
+}
+.qrb-program-page.program-women .program-experts__content > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56.5px;
+  color: #051878;
+  margin-bottom: 43px;
+}
+.qrb-program-page.program-women .program-experts__content .experts-content__info > h3 {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 26px;
+  color: #F3C15E;
+  margin-bottom: 30px;
+}
+.qrb-program-page.program-women .program-experts__content .experts-content__info {
+  text-align: start;
+  margin-bottom: 55px;
+}
+.qrb-program-page.program-women .program-experts__content .experts-content__info > h4 {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 26px;
+  color: #051878;
+  margin-bottom: 5px;
+}
+.qrb-program-page.program-women .program-experts__content .experts-content__info > p {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  color: #051878;
+  max-width: 82%;
+}
+.qrb-program-page.program-women .program-experts__content .experts-content__info > p > span {
+  font-weight: 700;
+}
+.qrb-program-page.program-women .program-experts__content .qrb-program .qrb-program__doctors .doctor-img img {
+  height: 195px;
+}
+.qrb-program-page.program-women .program-experts__content .qrb-program .qrb-program__doctors .doctor-img::before {
+  width: 187px;
+  height: 159px;
+}
+.qrb-program-page.program-women .program-experts__content .qrb-program .qrb-program__doctors .doctor-img::after {
+  width: 206px;
+}
+.qrb-program-page.program-women .program-experts__content .qrb-program .qrb-program__doctors .doctor-name h3 {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 56.5px;
+  vertical-align: middle;
+}
+.qrb-program-page.program-women .program-experts__content .qrb-program .qrb-program__doctors .doctor-name p {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #6295FF;
+}
+
+.qrb-program-page.program-women .qrb-program__subscription {
+  padding: 87px 20px 100px;
+}
+.qrb-program-page.program-women .program-subscription__content .subscription-info > h2 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 54px;
+  color: #F3C15E;
+  margin-bottom: 50px;
+}
+.qrb-program-page.program-women .subscription-actions > p {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.43;
+  text-align: center;
+  text-transform: capitalize;
+  color: #EF2727;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 17px;
+}
+.qrb-program-page.program-women .subscription-actions > .qrb-btn.btn-primary {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.43;
+  border-radius: 30px;
+  text-align: center;
+  text-transform: capitalize;
+  width: 65%;
+  padding: 25px 30px;
+  gap: 10px;
+  max-width: 70%;
+}
+
+.qrb-program-page.program-women .qrb-program__faqs {
+  padding: 90px 20px 100px;
+  background: #FDF4E480;
+}
+.qrb-program-page.program-women .program-faqs__content > h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 56.25px;
+  color: #081776;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.qrb-program-page.program-women .program-faqs__content .qrb-accordion .accordion-item {
+  background: transparent;
+}
+.qrb-program-page.program-women .program-faqs__content .qrb-accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
+  color: #4FABF7;
+}
+/*=============*/
 /* General */
 /* .text-warning {
   color: var(--clr-warning);
 } */
  .py-100{padding-block: 100px;}
+ .mb-70{margin-bottom: 70px;}

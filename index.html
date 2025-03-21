@@ -129,7 +129,7 @@
                                 </div>
                                 <h2 class="card-title">المساعدة الذاتية</h2>
                                 <p class="card-desc">افهم مشاكلك بشكل أفضل</p>
-                                <a href="" class="qrb-btn card-btn"> استكشف الآن</a>
+                                <a href="" class="qrb-btn card-btn" data-bs-toggle="modal" data-bs-target="#selfhelpbot"> استكشف الآن</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-xl-4">
@@ -464,6 +464,38 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal -->
+    <div class="modal qrb-modal fade" id="selfhelpbot" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">المساعدة الذاتية</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>الاسم</label>
+                                <input type="text" class="form-control" placeholder="ادخل الاسم">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label>البريد الالكتروني</label>
+                                <input type="email" class="form-control" placeholder="البريد الالكتروني">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="qrb-btn btn-primary">ابدأ التحدث</button>
+                    <button type="button" class="qrb-btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- SCRIPTS -->
     <!-- <script type='text/javascript' src='./assets/vendors/jquery-3.2.1.min.js' defer></script> -->
